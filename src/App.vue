@@ -113,8 +113,9 @@ onMounted(() => {
 
           <!-- Mobile Menu Toggle -->
           <button 
-            @click="mobileMenuOpen = !mobileMenuOpen"
-            class="md:hidden relative z-[60] p-2.5 glass text-white hover:text-primary transition-colors"
+            @click.stop="mobileMenuOpen = !mobileMenuOpen"
+            class="md:hidden relative z-[60] p-2.5 glass text-white hover:text-primary transition-all duration-300 active:scale-95"
+            aria-label="Toggle Menu"
           >
             <Menu v-if="!mobileMenuOpen" :size="24" />
             <X v-else :size="24" />
@@ -122,8 +123,12 @@ onMounted(() => {
 
           <!-- Mobile Menu Overlay -->
           <Transition name="mobile-menu">
-            <div v-if="mobileMenuOpen" class="fixed inset-0 z-50 md:hidden bg-background/95 backdrop-blur-2xl flex flex-col items-center justify-center p-8 space-y-8 overflow-hidden" style="background-color: var(--bg-darkers);">
-              <div class="flex flex-col items-center gap-6">
+            <div 
+              v-if="mobileMenuOpen" 
+              class="fixed inset-0 z-50 md:hidden bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center p-8 space-y-8"
+              @click="mobileMenuOpen = false"
+            >
+              <div class="flex flex-col items-center gap-6" @click.stop>
                 <a
                   v-for="section in sections"
                   :key="section.id"
@@ -137,15 +142,15 @@ onMounted(() => {
               </div>
 
               <!-- Theme Switcher Mobile -->
-              <div class="flex items-center gap-4 pt-8 border-t border-white/10 w-full justify-center">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Themes</span>
-                <div class="flex gap-3">
+              <div class="flex flex-col items-center gap-4 pt-8 border-t border-white/10 w-full max-w-[200px]" @click.stop>
+                <span class="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em]">Switch Theme</span>
+                <div class="flex gap-4">
                   <button
                     v-for="theme in themes"
                     :key="theme.id"
                     @click="setTheme(theme.id)"
-                    class="w-8 h-8 rounded-full border-2 transition-all duration-300"
-                    :class="currentTheme === theme.id ? 'border-primary scale-125' : 'border-transparent opacity-50'"
+                    class="w-10 h-10 rounded-full border-2 transition-all duration-300"
+                    :class="currentTheme === theme.id ? 'border-primary' : 'border-transparent opacity-40'"
                     :style="{ backgroundColor: theme.color }"
                   ></button>
                 </div>
