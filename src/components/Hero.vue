@@ -130,7 +130,7 @@ onMounted(() => {
         </div>
 
         <!-- Floating: Projects Badge -->
-        <div class="absolute top-1/2 -right-8 md:-right-14 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center float" style="animation-delay: 2s;">
+        <div class="absolute top-1/2 -right-4 md:-right-8 lg:-right-14 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center float" style="animation-delay: 2s;">
           <span class="text-xl md:text-2xl font-black text-secondary">10+</span>
           <span class="text-[8px] md:text-[9px] text-gray-500 font-bold uppercase tracking-widest">Projects</span>
         </div>

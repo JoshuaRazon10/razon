@@ -68,7 +68,7 @@ onMounted(() => {
     <Splash @finish="handleSplashFinish" />
 
     <Transition name="main-content">
-      <div v-show="isSplashFinished" class="relative">
+      <div v-show="isSplashFinished" class="relative overflow-x-hidden w-full">
         <!-- Animated Background -->
         <div class="animated-bg"></div>
         <div class="bg-grid"></div>
@@ -77,7 +77,7 @@ onMounted(() => {
         <!-- Navbar -->
         <nav class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-10 flex justify-between items-center nav-slide-down">
           <!-- Logo -->
-          <div class="relative z-[60]">
+          <div class="relative z-[70]">
              <a href="#hero" class="text-2xl font-black tracking-tighter text-white">Joshua<span class="text-primary">.</span></a>
           </div>
 
@@ -114,50 +114,50 @@ onMounted(() => {
           <!-- Mobile Menu Toggle -->
           <button 
             @click.stop="mobileMenuOpen = !mobileMenuOpen"
-            class="md:hidden relative z-[60] p-2.5 glass text-white hover:text-primary transition-all duration-300 active:scale-95"
+            class="md:hidden relative z-[70] p-2.5 glass text-white hover:text-primary transition-all duration-300 active:scale-95"
             aria-label="Toggle Menu"
           >
             <Menu v-if="!mobileMenuOpen" :size="24" />
             <X v-else :size="24" />
           </button>
+        </nav>
 
-          <!-- Mobile Menu Overlay -->
-          <Transition name="mobile-menu">
-            <div 
-              v-if="mobileMenuOpen" 
-              class="fixed inset-0 z-50 md:hidden bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center p-8 space-y-8"
-              @click="mobileMenuOpen = false"
-            >
-              <div class="flex flex-col items-center gap-6" @click.stop>
-                <a
-                  v-for="section in sections"
-                  :key="section.id"
-                  :href="`#${section.id}`"
-                  @click="mobileMenuOpen = false"
-                  class="text-4xl font-black tracking-tighter uppercase transition-all duration-300 hover:text-primary hover:scale-110"
-                  :class="activeSection === section.id ? 'text-primary' : 'text-white/40'"
-                >
-                  {{ section.name }}
-                </a>
-              </div>
+        <!-- Mobile Menu Overlay (Outside nav for better stacking) -->
+        <Transition name="mobile-menu">
+          <div 
+            v-if="mobileMenuOpen" 
+            class="fixed inset-0 z-[60] md:hidden bg-[#0a0a0f] flex flex-col items-center justify-center p-8 space-y-12"
+            @click="mobileMenuOpen = false"
+          >
+            <div class="flex flex-col items-center gap-8" @click.stop>
+              <a
+                v-for="section in sections"
+                :key="section.id"
+                :href="`#${section.id}`"
+                @click="mobileMenuOpen = false"
+                class="text-4xl font-black tracking-tighter uppercase transition-all duration-300 hover:text-primary hover:scale-110"
+                :class="activeSection === section.id ? 'text-primary' : 'text-white/40'"
+              >
+                {{ section.name }}
+              </a>
+            </div>
 
-              <!-- Theme Switcher Mobile -->
-              <div class="flex flex-col items-center gap-4 pt-8 border-t border-white/10 w-full max-w-[200px]" @click.stop>
-                <span class="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em]">Switch Theme</span>
-                <div class="flex gap-4">
-                  <button
-                    v-for="theme in themes"
-                    :key="theme.id"
-                    @click="setTheme(theme.id)"
-                    class="w-10 h-10 rounded-full border-2 transition-all duration-300"
-                    :class="currentTheme === theme.id ? 'border-primary' : 'border-transparent opacity-40'"
-                    :style="{ backgroundColor: theme.color }"
-                  ></button>
-                </div>
+            <!-- Theme Switcher Mobile -->
+            <div class="flex flex-col items-center gap-6 pt-12 border-t border-white/10 w-full max-w-[240px]" @click.stop>
+              <span class="text-xs font-black text-gray-500 uppercase tracking-[0.3em]">Select Theme</span>
+              <div class="flex gap-4">
+                <button
+                  v-for="theme in themes"
+                  :key="theme.id"
+                  @click="setTheme(theme.id)"
+                  class="w-10 h-10 rounded-full border-2 transition-all duration-300"
+                  :class="currentTheme === theme.id ? 'border-primary' : 'border-transparent opacity-40'"
+                  :style="{ backgroundColor: theme.color }"
+                ></button>
               </div>
             </div>
-          </Transition>
-        </nav>
+          </div>
+        </Transition>
 
         <!-- Main Content -->
         <main class="relative z-10">
