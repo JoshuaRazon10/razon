@@ -49,8 +49,8 @@ onMounted(() => {
 
       <!-- Name & Title -->
       <div class="space-y-3">
-        <h3 class="text-primary font-bold text-base tracking-widest uppercase">Hello, I'm</h3>
-        <h1 class="text-5xl lg:text-8xl font-black tracking-tighter leading-[0.9]">
+        <h3 class="text-primary font-bold text-sm md:text-base tracking-widest uppercase">Hello, I'm</h3>
+        <h1 class="text-4xl sm:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9]">
           Joshua <br />
           <span class="text-primary relative inline-block">
             Razon
@@ -58,7 +58,7 @@ onMounted(() => {
           </span>
         </h1>
         <div class="h-10 flex items-center">
-          <span class="text-xl lg:text-3xl text-gray-400 font-medium">
+          <span class="text-lg lg:text-3xl text-gray-400 font-medium">
             {{ typedText }}<span class="cursor-blink text-primary">|</span>
           </span>
         </div>
@@ -115,28 +115,28 @@ onMounted(() => {
     </div>
 
     <!-- Right Column: Profile Card -->
-    <div class="relative flex justify-center items-center hero-right">
+    <div class="relative flex justify-center items-center hero-right mt-12 lg:mt-0">
       <div class="relative group">
         <!-- Floating: Online Badge -->
-        <div class="absolute -top-8 -right-8 px-4 py-2 glass flex items-center gap-2 z-20 shadow-2xl float">
+        <div class="absolute -top-4 -right-4 md:-top-8 md:-right-8 px-4 py-2 glass flex items-center gap-2 z-20 shadow-2xl float">
           <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           <span class="text-xs font-bold text-white">Online</span>
         </div>
 
         <!-- Floating: Experience Badge -->
-        <div class="absolute -bottom-8 -left-8 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center border-primary/20 float-delayed">
-          <span class="text-2xl font-black text-primary">2+</span>
-          <span class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">Years Exp.</span>
+        <div class="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center border-primary/20 float-delayed">
+          <span class="text-xl md:text-2xl font-black text-primary">2+</span>
+          <span class="text-[8px] md:text-[9px] text-gray-500 font-bold uppercase tracking-widest">Years Exp.</span>
         </div>
 
         <!-- Floating: Projects Badge -->
-        <div class="absolute top-1/2 -right-14 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center float" style="animation-delay: 2s;">
-          <span class="text-2xl font-black text-secondary">10+</span>
-          <span class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">Projects</span>
+        <div class="absolute top-1/2 -right-8 md:-right-14 px-4 py-3 glass z-20 shadow-2xl flex flex-col items-center justify-center float" style="animation-delay: 2s;">
+          <span class="text-xl md:text-2xl font-black text-secondary">10+</span>
+          <span class="text-[8px] md:text-[9px] text-gray-500 font-bold uppercase tracking-widest">Projects</span>
         </div>
 
         <!-- Profile Card -->
-        <div class="relative w-[300px] h-[400px] lg:w-[340px] lg:h-[450px] rounded-3xl overflow-hidden glass border-white/5 group-hover:border-primary/20 transition-colors duration-500 shadow-[0_35px_60px_-15px_rgba(45,212,191,0.12)]">
+        <div class="relative w-[280px] h-[380px] lg:w-[340px] lg:h-[450px] rounded-3xl overflow-hidden glass border-white/5 group-hover:border-primary/20 transition-colors duration-500 shadow-[0_35px_60px_-15px_rgba(45,212,191,0.12)]">
           <img 
             src="/images/profile.jpg" 
             alt="Joshua Razon" 

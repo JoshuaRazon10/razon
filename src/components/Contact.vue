@@ -38,18 +38,18 @@ const socials = [
 </script>
 
 <template>
-  <section id="contact" class="container mx-auto px-6 py-32 space-y-20">
+  <section id="contact" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
-    <div class="text-center space-y-6">
+    <div class="text-center space-y-4 lg:space-y-6">
       <div class="fade-up">
         <span class="inline-block px-4 py-2 bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-xl">
           CONTACT ME
         </span>
       </div>
-      <h2 class="fade-up text-4xl lg:text-7xl font-black tracking-tighter">
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-7xl font-black tracking-tighter leading-tight">
         Let's <span class="text-rose-400 italic">Start</span> a Discussion
       </h2>
-      <p class="fade-up text-gray-400 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
+      <p class="fade-up text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
         Have a project in mind or want to collaborate? I'm always open to new opportunities and interesting conversations.
       </p>
     </div>
@@ -91,7 +91,7 @@ const socials = [
         <!-- Social Links -->
         <div class="space-y-4">
           <h4 class="text-xs font-black text-gray-600 uppercase tracking-widest px-4">Connect on Social</h4>
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <a
               v-for="social in socials"
               :key="social.label"

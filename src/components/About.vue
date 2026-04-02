@@ -27,18 +27,18 @@ const personalInfo = [
 </script>
 
 <template>
-  <section id="about" class="container mx-auto px-6 py-32 space-y-20">
+  <section id="about" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
-    <div class="space-y-6 text-center max-w-4xl mx-auto">
+    <div class="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">
       <div class="fade-up">
         <span class="inline-block px-4 py-2 bg-secondary/10 backdrop-blur-xl border border-secondary/20 text-secondary text-[10px] font-black uppercase tracking-[0.2em] rounded-xl">
           ABOUT ME
         </span>
       </div>
-      <h2 class="fade-up text-4xl lg:text-7xl font-black tracking-tighter">
-        Building the <span class="text-secondary opacity-90 underline underline-offset-8 decoration-[6px] decoration-secondary/30">Digital Future</span> Through Code
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-7xl font-black tracking-tighter leading-tight">
+        Building the <span class="text-secondary opacity-90 underline underline-offset-4 lg:underline-offset-8 decoration-[4px] lg:decoration-[6px] decoration-secondary/30">Digital Future</span> Through Code
       </h2>
-      <p class="fade-up text-gray-400 text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
+      <p class="fade-up text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
         I am a dedicated Fullstack Developer focused on creating elegant and functional digital solutions. 
         The combination of design intuition and technical expertise allows me to deliver exceptional user 
         experiences from front to back. I love turning complex problems into simple, beautiful, and intuitive designs.

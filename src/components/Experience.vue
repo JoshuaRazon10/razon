@@ -156,18 +156,18 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="experience" class="container mx-auto px-6 py-32 space-y-20">
+  <section id="experience" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
-    <div class="text-center space-y-6">
+    <div class="text-center space-y-4 lg:space-y-6">
       <div class="fade-up">
         <span class="inline-block px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-xl">
           MY JOURNEY
         </span>
       </div>
-      <h2 class="fade-up text-4xl lg:text-7xl font-black tracking-tighter">
-        Education & <span class="text-indigo-400 opacity-90 underline underline-offset-8 decoration-[6px] decoration-indigo-400/30">Experience</span>
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-7xl font-black tracking-tighter leading-tight">
+        Education & <span class="text-indigo-400 opacity-90 underline underline-offset-4 lg:underline-offset-8 decoration-[4px] lg:decoration-[6px] decoration-indigo-400/30">Experience</span>
       </h2>
-      <p class="fade-up text-gray-400 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
+      <p class="fade-up text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
         My path through education and professional training that shaped me into the developer I am today.
       </p>
     </div>
@@ -206,7 +206,7 @@ onUnmounted(() => {
       >
         <!-- Marker Dot -->
         <div
-          class="absolute left-[14px] lg:left-1/2 lg:-translate-x-1/2 w-7 h-7 rounded-full z-10 flex items-center justify-center top-8"
+          class="absolute left-[14px] lg:left-1/2 lg:-translate-x-1/2 w-6 h-6 lg:w-7 lg:h-7 rounded-full z-10 flex items-center justify-center top-8"
           :class="lineProgress > ((index + 0.3) / experiences.length) * 100
             ? 'bg-black/80 border-2 border-indigo-400 timeline-marker-active'
             : 'bg-black border-2 border-gray-800'"
@@ -215,7 +215,7 @@ onUnmounted(() => {
             : ''"
         >
           <div
-            class="w-2 h-2 rounded-full transition-all duration-700"
+            class="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full transition-all duration-700"
             :class="lineProgress > ((index + 0.3) / experiences.length) * 100 ? item.dotColor : 'bg-gray-700'"
           ></div>
         </div>

@@ -61,18 +61,18 @@ const hoveredProject = ref(null)
 </script>
 
 <template>
-  <section id="projects" class="container mx-auto px-6 py-32 space-y-20">
+  <section id="projects" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
-    <div class="text-center space-y-6">
+    <div class="text-center space-y-4 lg:space-y-6">
       <div class="fade-up">
         <span class="inline-block px-4 py-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-xl">
           MY PROJECTS
         </span>
       </div>
-      <h2 class="fade-up text-4xl lg:text-7xl font-black tracking-tighter">
-        Selected <span class="text-orange-400 opacity-90 underline underline-offset-8 decoration-[6px] decoration-orange-400/30">Projects</span>
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-7xl font-black tracking-tighter leading-tight">
+        Selected <span class="text-orange-400 opacity-90 underline underline-offset-4 lg:underline-offset-8 decoration-[4px] lg:decoration-[6px] decoration-orange-400/30">Projects</span>
       </h2>
-      <p class="fade-up text-gray-400 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
+      <p class="fade-up text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
         Some of my best work that combines technical innovation with immersive user experiences.
       </p>
     </div>

@@ -51,18 +51,18 @@ const isHovered = ref(false)
 </script>
 
 <template>
-  <section id="gallery" class="container mx-auto px-6 py-32 space-y-20 flex flex-col items-center">
+  <section id="gallery" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20 flex flex-col items-center">
     <!-- Header -->
-    <div class="text-center space-y-6 max-w-2xl">
+    <div class="text-center space-y-4 lg:space-y-6 max-w-2xl">
       <div class="fade-up">
         <span class="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-xl">
           MOMENTS & INTERESTS
         </span>
       </div>
-      <h2 class="fade-up text-4xl lg:text-7xl font-black tracking-tighter">
-        Click to <span class="text-purple-400 opacity-90 underline underline-offset-8 decoration-[6px] decoration-purple-400/30 text-7xl lg:text-8xl">Explore</span>
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-7xl font-black tracking-tighter leading-tight">
+        Click to <span class="text-purple-400 opacity-90 underline underline-offset-4 lg:underline-offset-8 decoration-[4px] lg:decoration-[6px] decoration-purple-400/30 text-5xl sm:text-7xl lg:text-8xl">Explore</span>
       </h2>
-      <p class="fade-up text-gray-400 text-base lg:text-lg leading-relaxed">
+      <p class="fade-up text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed">
         An interactive album of my journeys. Click the photo stack to shuffle through the moments that define me.
       </p>
     </div>
@@ -144,7 +144,7 @@ const isHovered = ref(false)
       </div>
 
       <!-- Helper UI -->
-      <div class="absolute -right-20 lg:right-0 bottom-10 flex flex-col items-end gap-3 pointer-events-none opacity-50">
+      <div class="absolute -bottom-12 lg:bottom-10 lg:right-0 flex flex-col items-end gap-3 pointer-events-none opacity-50">
         <div class="flex items-center gap-4 px-5 py-3 glass border-white/5 rounded-2xl">
           <Layers :size="16" class="text-purple-400" />
           <span class="text-xs font-bold text-white uppercase tracking-widest">{{ stack.length }} Photos Remaining</span>

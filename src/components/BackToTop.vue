@@ -21,10 +21,10 @@ onUnmounted(() => window.removeEventListener('scroll', checkScroll))
     <button
       v-show="showButton"
       @click="scrollToTop"
-      class="fixed bottom-8 right-8 z-[60] p-3.5 bg-primary text-black rounded-full shadow-[0_0_25px_rgba(45,212,191,0.3)] hover:scale-110 active:scale-95 transition-all duration-300 group"
+      class="fixed bottom-5 lg:bottom-8 left-5 lg:left-8 z-[60] p-3 lg:p-3.5 bg-primary text-black rounded-full shadow-[0_0_25px_rgba(45,212,191,0.3)] hover:scale-110 active:scale-95 transition-all duration-300 group"
       title="Back to Top"
     >
-      <ArrowUp :size="22" class="group-hover:-translate-y-0.5 transition-transform" />
+      <ArrowUp :size="20" class="lg:size-[22px] group-hover:-translate-y-0.5 transition-transform" />
     </button>
   </Transition>
 </template>

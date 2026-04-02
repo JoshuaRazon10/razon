@@ -34,13 +34,13 @@ onMounted(() => {
       </div>
 
       <!-- Text Reveal -->
-      <div class="overflow-hidden text-center flex flex-col gap-3">
-        <h1 class="text-2xl md:text-4xl font-black text-white tracking-widest uppercase welcome-text flex items-center justify-center gap-1">
-          <span v-for="(char, i) in welcomeText" :key="i" :style="{ animationDelay: (i * 0.05) + 's' }" class="char-reveal">
+      <div class="overflow-hidden text-center flex flex-col gap-3 px-4">
+        <h1 class="text-lg sm:text-2xl md:text-4xl font-black text-white tracking-[0.15em] sm:tracking-widest uppercase welcome-text flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+          <span v-for="(char, i) in welcomeText" :key="i" :style="{ animationDelay: (i * 0.03) + 's' }" class="char-reveal">
             {{ char === ' ' ? '&nbsp;' : char }}
           </span>
         </h1>
-        <div class="h-[2px] w-0 bg-primary mx-auto loader-line"></div>
+        <div class="h-[1.5px] lg:h-[2px] w-0 bg-primary mx-auto loader-line"></div>
         <p class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.5em] mt-2 opacity-0 animate-fade-up-slow">
           Initializing System...
         </p>

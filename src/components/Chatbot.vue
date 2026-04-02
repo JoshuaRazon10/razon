@@ -168,8 +168,8 @@ const sendMessage = async (msg = null) => {
 <style scoped>
 .chatbot-wrapper {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  right: 20px;
   z-index: 99999;
 }
 
@@ -314,12 +314,17 @@ const sendMessage = async (msg = null) => {
 
 /* Mobile responsive */
 @media (max-width: 480px) {
+  .chatbot-wrapper {
+    right: 16px;
+    bottom: 16px;
+  }
   .chatbot-window {
     width: calc(100vw - 32px);
-    left: -8px;
-    height: calc(100vh - 140px);
-    max-height: calc(100vh - 140px);
-    bottom: 68px;
+    right: 0;
+    left: auto;
+    height: calc(100vh - 120px);
+    max-height: 600px;
+    bottom: 64px;
   }
 }
 </style>

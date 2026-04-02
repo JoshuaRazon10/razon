@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { Menu, X } from 'lucide-vue-next'
 import { useScrollReveal } from './composables/useScrollReveal'
 import { useTheme } from './composables/useTheme'
 import Hero from './components/Hero.vue'
@@ -74,8 +75,14 @@ onMounted(() => {
         <div class="noise-overlay"></div>
 
         <!-- Navbar -->
-        <nav class="fixed top-0 left-0 w-full z-50 flex justify-center py-5 px-4 nav-slide-down">
-          <div class="glass flex items-center gap-1 px-5 py-2.5 shadow-2xl">
+        <nav class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-10 flex justify-between items-center nav-slide-down">
+          <!-- Logo -->
+          <div class="relative z-[60]">
+             <a href="#hero" class="text-2xl font-black tracking-tighter text-white">Joshua<span class="text-primary">.</span></a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex glass items-center gap-1 px-5 py-2.5 shadow-2xl">
             <div v-for="section in sections" :key="section.id" class="relative">
               <a
                 :href="`#${section.id}`"
@@ -103,6 +110,48 @@ onMounted(() => {
               ></button>
             </div>
           </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button 
+            @click="mobileMenuOpen = !mobileMenuOpen"
+            class="md:hidden relative z-[60] p-2.5 glass text-white hover:text-primary transition-colors"
+          >
+            <Menu v-if="!mobileMenuOpen" :size="24" />
+            <X v-else :size="24" />
+          </button>
+
+          <!-- Mobile Menu Overlay -->
+          <Transition name="mobile-menu">
+            <div v-if="mobileMenuOpen" class="fixed inset-0 z-50 md:hidden bg-background/95 backdrop-blur-2xl flex flex-col items-center justify-center p-8 space-y-8 overflow-hidden" style="background-color: var(--bg-darkers);">
+              <div class="flex flex-col items-center gap-6">
+                <a
+                  v-for="section in sections"
+                  :key="section.id"
+                  :href="`#${section.id}`"
+                  @click="mobileMenuOpen = false"
+                  class="text-4xl font-black tracking-tighter uppercase transition-all duration-300 hover:text-primary hover:scale-110"
+                  :class="activeSection === section.id ? 'text-primary' : 'text-white/40'"
+                >
+                  {{ section.name }}
+                </a>
+              </div>
+
+              <!-- Theme Switcher Mobile -->
+              <div class="flex items-center gap-4 pt-8 border-t border-white/10 w-full justify-center">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Themes</span>
+                <div class="flex gap-3">
+                  <button
+                    v-for="theme in themes"
+                    :key="theme.id"
+                    @click="setTheme(theme.id)"
+                    class="w-8 h-8 rounded-full border-2 transition-all duration-300"
+                    :class="currentTheme === theme.id ? 'border-primary scale-125' : 'border-transparent opacity-50'"
+                    :style="{ backgroundColor: theme.color }"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </Transition>
         </nav>
 
         <!-- Main Content -->
@@ -174,5 +223,23 @@ html {
 
 section {
   @apply min-h-screen py-24 flex flex-col justify-center;
+}
+
+/* Mobile Menu Transition */
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+  section {
+    @apply py-16 px-4;
+  }
 }
 </style>
