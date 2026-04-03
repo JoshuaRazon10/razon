@@ -6,6 +6,17 @@ export default {
   ],
   darkMode: 'class',
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1.5rem',
+        sm: '2rem',
+        md: '4rem',
+        lg: '6rem',
+        xl: '10rem',
+        '2xl': '14rem',
+      },
+    },
     extend: {
       colors: {
         primary: '#2dd4bf', // Teal/Cyan from target site

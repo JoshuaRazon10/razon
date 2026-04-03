@@ -116,7 +116,7 @@ const updateLineProgress = () => {
   }
 
   // Smooth interpolation (lerp) for buttery-smooth animation
-  currentProgress = lerp(currentProgress, targetProgress, 0.08)
+  currentProgress = lerp(currentProgress, targetProgress, 0.05)
 
   // Snap if very close
   if (Math.abs(currentProgress - targetProgress) < 0.1) {
@@ -156,7 +156,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="experience" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
+  <section id="experience" class="container py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
     <div class="text-center space-y-4 lg:space-y-6">
       <div class="fade-up">

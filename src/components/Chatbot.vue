@@ -212,7 +212,7 @@ const sendMessage = async (msg = null) => {
 .chatbot-window {
   position: absolute;
   bottom: 72px;
-  left: 0;
+  right: 0;
   width: 360px;
   max-height: calc(100vh - 120px);
   height: 520px;

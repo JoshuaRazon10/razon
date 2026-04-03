@@ -36,7 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="container mx-auto px-6 grid lg:grid-cols-2 items-center gap-16">
+  <section id="hero" class="container grid lg:grid-cols-2 items-center gap-16">
     <!-- Left Column -->
     <div class="flex flex-col gap-7 hero-left">
       <!-- Status Badge -->

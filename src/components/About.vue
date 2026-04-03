@@ -27,7 +27,7 @@ const personalInfo = [
 </script>
 
 <template>
-  <section id="about" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20">
+  <section id="about" class="container py-16 lg:py-32 space-y-12 lg:space-y-20">
     <!-- Header -->
     <div class="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">
       <div class="fade-up">

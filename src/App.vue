@@ -75,51 +75,53 @@ onMounted(() => {
         <div class="noise-overlay"></div>
 
         <!-- Navbar -->
-        <nav class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-10 flex justify-between items-center nav-slide-down">
-          <!-- Logo -->
-          <div class="relative z-[70]">
-             <a href="#hero" class="text-2xl font-black tracking-tighter text-white">Joshua<span class="text-primary">.</span></a>
-          </div>
-
-          <!-- Desktop Navigation -->
-          <div class="hidden md:flex glass items-center gap-1 px-5 py-2.5 shadow-2xl">
-            <div v-for="section in sections" :key="section.id" class="relative">
-              <a
-                :href="`#${section.id}`"
-                class="px-3.5 py-2 text-xs font-bold tracking-wider transition-colors duration-300 relative z-10 block uppercase"
-                :class="activeSection === section.id ? 'text-primary' : 'text-gray-500 hover:text-gray-300'"
-              >
-                {{ section.name }}
-              </a>
-              <div
-                v-if="activeSection === section.id"
-                class="absolute inset-0 bg-primary/10 rounded-xl transition-all duration-500"
-              ></div>
+        <nav class="fixed top-0 left-0 w-full z-50 py-5 nav-slide-down">
+          <div class="container flex justify-between items-center">
+            <!-- Logo -->
+            <div class="relative z-[70]">
+               <a href="#hero" class="text-2xl font-black tracking-tighter text-white">Joshua<span class="text-primary">.</span></a>
             </div>
-
-            <!-- Theme Switcher -->
-            <div class="ml-4 pl-4 border-l border-white/10 flex items-center gap-2">
-              <button
-                v-for="theme in themes"
-                :key="theme.id"
-                @click="setTheme(theme.id)"
-                class="theme-btn"
-                :class="{ active: currentTheme === theme.id }"
-                :style="{ backgroundColor: theme.color }"
-                :title="theme.label + ' theme'"
-              ></button>
+  
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex glass items-center gap-1 px-5 py-2.5 shadow-2xl">
+              <div v-for="section in sections" :key="section.id" class="relative">
+                <a
+                  :href="`#${section.id}`"
+                  class="px-3.5 py-2 text-xs font-bold tracking-wider transition-colors duration-300 relative z-10 block uppercase"
+                  :class="activeSection === section.id ? 'text-primary' : 'text-gray-500 hover:text-gray-300'"
+                >
+                  {{ section.name }}
+                </a>
+                <div
+                  v-if="activeSection === section.id"
+                  class="absolute inset-0 bg-primary/10 rounded-xl transition-all duration-500"
+                ></div>
+              </div>
+  
+              <!-- Theme Switcher -->
+              <div class="ml-4 pl-4 border-l border-white/10 flex items-center gap-2">
+                <button
+                  v-for="theme in themes"
+                  :key="theme.id"
+                  @click="setTheme(theme.id)"
+                  class="theme-btn"
+                  :class="{ active: currentTheme === theme.id }"
+                  :style="{ backgroundColor: theme.color }"
+                  :title="theme.label + ' theme'"
+                ></button>
+              </div>
             </div>
+  
+            <!-- Mobile Menu Toggle -->
+            <button 
+              @click.stop="mobileMenuOpen = !mobileMenuOpen"
+              class="md:hidden relative z-[70] p-2.5 glass text-white hover:text-primary transition-all duration-300 active:scale-95"
+              aria-label="Toggle Menu"
+            >
+              <Menu v-if="!mobileMenuOpen" :size="24" />
+              <X v-else :size="24" />
+            </button>
           </div>
-
-          <!-- Mobile Menu Toggle -->
-          <button 
-            @click.stop="mobileMenuOpen = !mobileMenuOpen"
-            class="md:hidden relative z-[70] p-2.5 glass text-white hover:text-primary transition-all duration-300 active:scale-95"
-            aria-label="Toggle Menu"
-          >
-            <Menu v-if="!mobileMenuOpen" :size="24" />
-            <X v-else :size="24" />
-          </button>
         </nav>
 
         <!-- Mobile Menu Overlay (Outside nav for better stacking) -->
@@ -175,7 +177,7 @@ onMounted(() => {
 
         <!-- Footer -->
         <footer class="relative z-10 py-16 border-t border-white/5" style="background-color: var(--bg-darker);">
-          <div class="container mx-auto px-6">
+          <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
               <!-- Brand -->
               <div class="space-y-4">

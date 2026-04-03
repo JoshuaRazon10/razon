@@ -51,7 +51,7 @@ const isHovered = ref(false)
 </script>
 
 <template>
-  <section id="gallery" class="container mx-auto px-6 py-16 lg:py-32 space-y-12 lg:space-y-20 flex flex-col items-center">
+  <section id="gallery" class="container py-16 lg:py-32 space-y-12 lg:space-y-20 flex flex-col items-center">
     <!-- Header -->
     <div class="text-center space-y-4 lg:space-y-6 max-w-2xl">
       <div class="fade-up">
