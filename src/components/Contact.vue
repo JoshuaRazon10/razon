@@ -32,8 +32,8 @@ const contactInfo = [
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/joshuarazon", user: "@joshuarazon" },
   { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/joshuarazon", user: "Joshua Razon" },
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com/joshuarazon", user: "@joshuarazon" },
-  { icon: Facebook, label: "Facebook", href: "https://facebook.com/joshuarazon", user: "Joshua Razon" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com/joshua_razon", user: "@joshua_razon" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/16hQqLRZsk/", user: "Joshua Razon" },
 ]
 </script>
 

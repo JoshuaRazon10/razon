@@ -196,8 +196,8 @@ onMounted(() => {
                 <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest">Connect</h4>
                 <div class="flex flex-wrap gap-3">
                   <a href="https://github.com/joshuarazon" target="_blank" class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/30 hover:text-white transition-all duration-300 text-xs font-bold text-gray-500">GitHub</a>
-                  <a href="https://facebook.com/joshuarazon" target="_blank" class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-[#1877F2]/10 hover:border-[#1877F2]/40 hover:text-[#1877F2] transition-all duration-300 text-xs font-bold text-gray-500">Facebook</a>
-                  <a href="https://instagram.com/joshuarazon" target="_blank" class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-[#E4405F]/10 hover:border-[#E4405F]/40 hover:text-[#E4405F] transition-all duration-300 text-xs font-bold text-gray-500">Instagram</a>
+                  <a href="https://facebook.com/share/16hQqLRZsk/" target="_blank" class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-[#1877F2]/10 hover:border-[#1877F2]/40 hover:text-[#1877F2] transition-all duration-300 text-xs font-bold text-gray-500">Facebook</a>
+                  <a href="https://instagram.com/joshua_razon" target="_blank" class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-[#E4405F]/10 hover:border-[#E4405F]/40 hover:text-[#E4405F] transition-all duration-300 text-xs font-bold text-gray-500">Instagram</a>
                 </div>
               </div>
             </div>

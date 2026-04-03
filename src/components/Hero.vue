@@ -93,10 +93,10 @@ onMounted(() => {
         <a href="https://github.com/joshuarazon" target="_blank" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-white/10 hover:border-white/30 hover:text-white transition-all duration-300 hover:-translate-y-1 text-gray-400">
           <Github :size="22" />
         </a>
-        <a href="https://facebook.com/joshuarazon" target="_blank" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-[#1877F2]/10 hover:border-[#1877F2]/40 hover:text-[#1877F2] transition-all duration-300 hover:-translate-y-1 text-gray-400">
+        <a href="https://facebook.com/share/16hQqLRZsk/" target="_blank" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-[#1877F2]/10 hover:border-[#1877F2]/40 hover:text-[#1877F2] transition-all duration-300 hover:-translate-y-1 text-gray-400">
           <Facebook :size="22" />
         </a>
-        <a href="https://instagram.com/joshuarazon" target="_blank" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-[#E4405F]/10 hover:border-[#E4405F]/40 hover:text-[#E4405F] transition-all duration-300 hover:-translate-y-1 text-gray-400">
+        <a href="https://instagram.com/joshua_razon" target="_blank" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-[#E4405F]/10 hover:border-[#E4405F]/40 hover:text-[#E4405F] transition-all duration-300 hover:-translate-y-1 text-gray-400">
           <Instagram :size="22" />
         </a>
         <a href="mailto:joshuarazon731@gmail.com" class="p-3 bg-white/5 border border-white/[0.08] rounded-xl hover:bg-[#EA4335]/10 hover:border-[#EA4335]/40 hover:text-[#EA4335] transition-all duration-300 hover:-translate-y-1 text-gray-400">
